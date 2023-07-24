@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mesto</title>
+  <link rel="stylesheet" href="pages/index.css"> </head>
+
+<body class="body">
+  <div class="page">
+    <header class="header">
+      <div class="header__logo"></div>
+    </header>
+    <main class="content">
+      <section class="profile">
+        <div class="profile__card"> <img src="./images/zhak-img.jpg" alt="Фото профиля" class="profile__avatar">
+          <div class="profile__info">
+            <div class="profile__text">
+              <h1 class="profile__title">Жак Ив Кусто</h1>
+              <p class="profile__subtitle">Исследователь</p>
+            </div>
+            <button type="button" class="profile__edit-button"></button>
+          </div>
+        </div>
+        <button type="button" class="profile__add-button"></button>
+      </section>
+      <section class="elements">
+        <ul class="elements__grid"> </ul>
+      </section>
+    </main>
+    <footer class="footer">
+      <p class="footer__copyright">&copy;2023 Julia Gaba</p>
+    </footer>
+    <div class="popup popup_type_edit-card">
+      <div class="popup__container">
+        <button class="popup__close" type="button"></button>
+        <form class="popup__form popup__form_edit" name="inputProfile">
+          <h3 class="popup__title">Редактировать&nbsp;профиль</h3>
+          <label class="popup__label">
+            <input class="popup__input popup__input_type_title" required minlength="2" maxlength="40" type="text" name="username" placeholder="Введите имя">
+            <span id="username-error" class="error"></span>
+          </label>
+          <label class="popup__label">
+            <input class="popup__input popup__input_type_subtitle" required minlength="2" maxlength="200" type="text" name="job" placeholder="Расскажите о себе">
+            <span id="job-error" class="error"></span>
+           </label>
+          <button class="popup__save popup__save_type_edit" type="submit">Сохранить</button>
+        </form>
+      </div>
+    </div>
+    <div class="popup popup_type_new-card">
+      <div class="popup__container">
+        <button class="popup__close" type="button"></button>
+        <form class="popup__form popup__form_add" name="inputCard">
+          <h3 class="popup__title">Новое&nbsp;место</h3>
+          <label class="popup__label">
+            <input class="popup__input popup__input_type_title-card" required minlength="2" maxlength="30" type="text" name="name" placeholder="Название">
+            <span id="name-error" class="error"></span>
+          </label>
+          <label class="popup__label">
+            <input class="popup__input popup__input_type_subtitle-card" required type="url" name="link" placeholder="Ссылка на картинку">
+            <span id="link-error" class="error"></span>
+          </label>
+          <button class="popup__save popup__save_type_add" type="submit">Сохранить</button>
+        </form>
+      </div>
+    </div>
+   <div class="popup popup_type_photo">
+      <div class="popup__container-photo">
+        <button class="popup__close" type="button"></button>
+        <img src="." alt="image" class="popup__image">
+        <p class="popup__title-photo"></p>
+      </div>
+    </div>
+  </div>
+  <template id="template-elements">
+    <li class="element">
+      <div class="element__img-container">
+        <button class="element__delete" type="button"></button> <img src="." alt="" class="element__image"> </div>
+      <div class="element__box">
+        <h2 class="element__title"></h2>
+        <button class="element__heart" type="button"></button>
+      </div>
+    </li>
+  </template>
+  <script type="module" src="./javascript/initialcards.js"></script>
+  <script type="module" src="./javascript/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+.element__heart_color_black {
+  background-image: url(../../../../images/black-heart.svg);
+  width: 22px;
+  height: 19px;
+  align-self: center;
+  cursor: pointer;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  margin-right: 30px;
+  border: 0;
+  background-color: #fff;
+  background-repeat: no-repeat;
+}
+
+.element__heart_color_black:hover {
+  transition: 0.3s ease;
+  opacity: 0.5;
+}
+
+
+
+@media screen and (max-width: 321px) {
+  .element__heart_color_black {
+    margin-right: 20px;
+ }
+}

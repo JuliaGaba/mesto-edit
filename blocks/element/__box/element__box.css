@@ -1,0 +1,11 @@
+.element__box {
+  background-color: white;
+  width: 100%;
+  border-radius: 0 0 10px 10px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 282px;
+  min-height: 79px;
+}
